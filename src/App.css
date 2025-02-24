@@ -1,0 +1,24 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.app {
+  /* background: rgb(111, 52, 142);
+  background: linear-gradient(315.16deg, #9C27B0 19%, #6A1B9A 86.85%); */
+  background: linear-gradient(315.16deg, #9C27B0 19%, #6A1B9A 86.85%);
+  color: white;
+  font-family: "Open Sans", serif;
+}
+

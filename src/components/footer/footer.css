@@ -1,0 +1,139 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(315.16deg, #6A1B9A 19%, #9C27B0 86.85%);
+    /* color: white; */
+    position: relative;
+    padding-top: 150px;
+    bottom: 0;
+    font-family: "Open Sans", serif;
+}
+.footer-divider {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 400px;
+    width: 100%;
+    padding-top: 100px;
+    background: transparent;
+}
+
+.curve {
+    position: absolute;
+    height: 250px;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+  }
+
+  .curve::before {
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+    width: 55%;
+    height: 100%;
+    transform: translate(85%, 60%);
+    background-color: hsl(216, 21%, 16%);
+  }
+
+  .curve::after {
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+    width: 55%;
+    height: 100%;
+    background-color: #3c31dd;
+    transform: translate(-4%, 40%);
+    z-index: -1;
+  }
+
+.wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.wave svg {
+    position: relative;
+    display: block;
+    width: calc(142% + 1.3px);
+    height: 328px;
+}
+
+.wave .shape-fill {
+    fill: #ffff;
+}
+
+.footer-innerdiv {
+    display: flex;
+    flex-direction: column;
+    padding: 6%;
+    width: 100%;
+}
+
+.footer-innerdiv__p {
+    margin-bottom: 1rem;
+    font-size: clamp(1.5rem, 3vw, 3rem);
+}
+
+.footer-innerdiv__title {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 7rem;
+}
+
+.footer-innerdiv__img {
+    width: 5rem;
+    margin-right: 4rem;
+}
+
+.footer-innerdiv__img img {
+    width: 100%;
+    height: auto;
+}
+
+.footer-innerdiv__content {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.footer-innerdiv-lists {
+    display: flex;
+    flex-direction: column;
+    margin-right: 4rem;
+    max-height: 8rem;
+}
+
+.footer-innerdiv-lists p {
+    font-size: clamp(11px, 1.5vw, 20px);
+    margin-bottom: 1rem;
+}
+
+.footer-innerdiv-list__ul {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-innerdiv-list__li {
+    margin: 0;
+    font-size: clamp(0.2rem, 1vw, 1rem);
+    line-height: normal;
+    color: rgba(255, 255, 255, 1);
+}
+
+.icon {
+    margin-right: 1rem;
+}

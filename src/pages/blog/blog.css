@@ -1,0 +1,11 @@
+/* Blog css */
+
+.blog-home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: white;
+    height: 100vh;
+    color: black;
+}

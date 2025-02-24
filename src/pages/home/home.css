@@ -1,0 +1,72 @@
+/* css for home screen */
+
+.home {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* justify-content: center; */
+    padding-top: 1.5rem;
+
+}
+
+.home-welcome__div {
+    padding: 0 6%;
+    height: 100vh;
+}
+
+.home-welcome__innerdiv {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    font-family: "Inter", serif;
+
+}
+
+.home-welcome__innerdiv_text {
+    padding-top: 6%;
+}
+
+.home-welcome__largetext {
+    font-size: clamp(32px, 3.75vw, 96px);
+    font-style: normal;
+    font-weight: 400;
+    padding-bottom: 2rem;
+}
+
+.home-welcome__largetext span {
+    font-weight: 700;
+}
+
+.home-welome__desc {
+    font-weight: 400;
+    font-size: clamp(24px, 1.64vw, 42px);
+    padding-bottom: 2rem;
+}
+
+.home-welcome__buttondiv {}
+
+.home-blog {
+    background: white;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    padding: 6%;
+}
+
+.home-divider {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 400px;
+    padding-top: 100px;
+}
+
+.wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    background: white;
+}
