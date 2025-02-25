@@ -8,6 +8,8 @@ import {
 } from "../../features/usersSlice";
 import { RootState } from "../../app/store";
 import { fetchUsers } from "../../utils/api/fetchData";
+import "./users.css";
+import UserCard from "../../components/user-card";
 
 const UserIndexScreen: React.FC = () => {
   const { users, status, error } = useSelector(
@@ -29,8 +31,12 @@ const UserIndexScreen: React.FC = () => {
     return <div>Error: {error}</div>;
   }
   return (
-    <div>
-      <p>{JSON.stringify(users)}</p>
+    <div className="users">
+      <div className="users-innnerdiv">
+        {users.map((user) => (
+          <UserCard key={user.id} user={user} />
+        ))}
+      </div>
     </div>
   );
 };

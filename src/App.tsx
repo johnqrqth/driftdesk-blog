@@ -8,7 +8,7 @@ import NotFoundScreen from "./pages/not-found";
 
 function App() {
   return (
-    <div className="app container">
+    <div className="app">
       <div className="">
         <Routes>
           <Route path="/" element={<Layout />}>

@@ -17,7 +17,7 @@ const SinglePostScreen: React.FC = () => {
 
   return (
     <div className="blog-home">
-      <h1>{post?.title}</h1>
+      <h1 className="blog-h1">{post?.title}</h1>
       <p>{post?.body}</p>
     </div>
   );

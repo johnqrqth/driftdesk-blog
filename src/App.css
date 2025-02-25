@@ -8,6 +8,7 @@
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 ul {
@@ -15,10 +16,9 @@ ul {
 }
 
 .app {
-  /* background: rgb(111, 52, 142);
-  background: linear-gradient(315.16deg, #9C27B0 19%, #6A1B9A 86.85%); */
   background: linear-gradient(315.16deg, #9C27B0 19%, #6A1B9A 86.85%);
   color: white;
   font-family: "Open Sans", serif;
+  min-width: 100%;
 }
 

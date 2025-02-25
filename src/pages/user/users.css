@@ -1,0 +1,21 @@
+.users {
+    background: white;
+    padding: 2rem 0;
+}
+
+.users-innnerdiv {
+    background: white;
+    min-height: 50vh;
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    color: black;
+    gap: 1rem;
+    margin-inline: 6%;
+}
+
+
+@media (width >=1024px) {
+    .users-innnerdiv {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+}

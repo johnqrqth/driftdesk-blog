@@ -6,35 +6,23 @@
 
 .postcard-image {
     position: relative;
-    /* relative */
     max-width: 100%;
-    /* max-w-full */
     width: 140px;
-    /* w-full */
     height: 150px;
-    /* h-[170px] */
     overflow: hidden;
-    /* overflow-hidden */
     border-radius: 0.5rem;
-    /* rounded-lg (8px) */
 }
 
 .postcard-image img {
     width: 100%;
-    /* w-full */
     height: 100%;
-    /* h-auto */
     object-fit: cover;
-    /* object-cover */
     transition: all 0.3s ease-in-out;
     position: absolute;
-    /* transition-all ease-in-out */
 }
 
 .group:hover img {
-    /* group-hover:scale-105 */
     transform: scale(1.05);
-    /* scale-105 */
 }
 
 .postcard-texts {
@@ -47,7 +35,7 @@
     margin-bottom: 1rem;
     color: #6b7280;
     max-width: 7rem;
-    max-height: 1rem;
+    max-height: 1.2rem;
     overflow: hidden;
     line-height: normal;
 }

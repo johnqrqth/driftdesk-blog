@@ -8,4 +8,10 @@
     background: white;
     height: 100vh;
     color: black;
+    padding-inline: 6%;
+}
+
+.blog-h1 {
+    color: rgba(0, 0, 0, 0.54);
+    padding-bottom: 3rem;
 }

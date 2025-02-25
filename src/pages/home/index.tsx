@@ -12,6 +12,7 @@ import { fetchPosts } from "../../utils/api/fetchData";
 import Button from "../../components/button";
 import comp from "../../assets/homescreenimage.png";
 import PostCard from "../../components/post-card";
+import Divider from "../../assets/decoration.svg";
 
 const HomeScreen: React.FC = () => {
   const { posts, status, error } = useSelector(
@@ -48,8 +49,11 @@ const HomeScreen: React.FC = () => {
               <Button>Do something</Button>
             </div>
           </div>
-          <div>
+          <div className="home-welcome__innerdiv__img">
             <img src={comp} alt="computer monitor" />
+          </div>
+          <div className="home-divider">
+            <img src={Divider} alt="divider" />
           </div>
         </div>
       </div>
