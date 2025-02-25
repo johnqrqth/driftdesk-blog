@@ -1,15 +1,13 @@
-import React from 'react'
+import React from "react";
 
 interface SearchComponentProps {
-    onClose: ()=> void
+  onClose: () => void;
 }
 
-const SearchComponent: React.FC<SearchComponentProps> = ({onClose}) => {
+const SearchComponent: React.FC<SearchComponentProps> = ({ onClose }) => {
+  onClose();
 
-    
-  return (
-    <div>index</div>
-  )
-}
+  return <div>index</div>;
+};
 
-export default SearchComponent
+export default SearchComponent;

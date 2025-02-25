@@ -1,23 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { RootState } from "../../app/store";
-import { selectPostById } from "../../features/postsSlice";
+import { selectPostById, selectPostByTitle } from "../../features/postsSlice";
 import { useParams } from "react-router-dom";
-import './blog.css'
+import "./blog.css";
 
 const SinglePostScreen: React.FC = () => {
   let { postId } = useParams();
 
+  const [boldTitle, setBoldTitle] = useState(false)
+
   console.log("postId", postId);
 
   const post = useSelector((state: RootState) =>
-    selectPostById(state, 42)
+    selectPostById(state, Number(postId))
   );
-  console.log(post)
+
+  //   const post = useSelector((state: RootState) =>
+  //     selectPostByTitle(state, 'magnus')
+  //   );
+
+//   let boldTitle = false;
+
+  if (post?.title === "magnam facilis") {
+    console.log(post)
+    setBoldTitle(true)
+  }
+
+  
 
   return (
     <div className="blog-home">
-      <h1 className="blog-h1">{post?.title}</h1>
+      <h1 className={boldTitle ? 'blog-h1': 'bold-title'}>{post?.title}</h1>
       <p>{post?.body}</p>
     </div>
   );

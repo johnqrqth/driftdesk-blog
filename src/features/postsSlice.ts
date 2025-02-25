@@ -43,4 +43,7 @@ export const { fetchPostsStart, fetchPostsSuccess, fetchPostsFailure } = postsSl
 export const selectPostById = (state: RootState, postId: number) =>
     state.posts.posts.find((post) => post.id === postId);
 
+export const selectPostByTitle = (state: RootState, postTitle: string) =>
+    state.posts.posts.find((post) => post.title === postTitle);
+
 export default postsSlice.reducer;

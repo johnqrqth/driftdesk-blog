@@ -15,3 +15,10 @@
     color: rgba(0, 0, 0, 0.54);
     padding-bottom: 3rem;
 }
+
+.bold-title {
+    font-weight: bolder;
+    color: rgba(0, 0, 0, 0.54);
+    padding-bottom: 3rem;
+
+}

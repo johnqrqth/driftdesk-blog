@@ -36,7 +36,7 @@
     color: #6b7280;
     max-width: 7rem;
     max-height: 1.2rem;
-    overflow: hidden;
+    /* overflow: hidden; */
     line-height: normal;
 }
 
@@ -51,4 +51,8 @@
     list-style: none;
     text-decoration: none;
     color: #E1BEE7;
+}
+
+.bold-title {
+    font-weight: bolder;
 }

@@ -7,6 +7,7 @@ import {
   fetchPostsFailure,
   fetchPostsStart,
   fetchPostsSuccess,
+  selectPostByTitle,
 } from "../../features/postsSlice";
 import { fetchPosts } from "../../utils/api/fetchData";
 import Button from "../../components/button";
@@ -26,6 +27,11 @@ const HomeScreen: React.FC = () => {
     fetchPostsFailure
   );
 
+  const selectedPost = useSelector((state: RootState) => selectPostByTitle(state, 'magnam facilis'))
+
+
+  console.log(selectedPost)
+
   if (status === "loading") {
     return <div>Loading posts...</div>;
   }
@@ -33,6 +39,9 @@ const HomeScreen: React.FC = () => {
   if (status === "failed") {
     return <div>Error: {error}</div>;
   }
+
+
+//   console.log(selectedPost)
   return (
     <div className="home">
       <div className="home-welcome__div">
