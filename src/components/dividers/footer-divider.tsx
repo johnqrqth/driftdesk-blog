@@ -1,9 +1,9 @@
 import React from "react";
 
-const FooterDivider = () => {
+const FooterDivider: React.FC = () => {
   return (
     <div className="wave-container">
-      <div className="footerwave ">
+      <div className="footer-wave">
         <svg
           data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"

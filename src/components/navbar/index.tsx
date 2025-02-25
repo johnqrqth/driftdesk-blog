@@ -1,15 +1,18 @@
-import React, { useState } from "react";
+import React, { Fragment, useState } from "react";
 import "./navbar.css";
 import { Link } from "react-router-dom";
 import logo from "../../assets/logo.svg";
 import Button from "../button";
 import { FaSearch } from "react-icons/fa";
 import { RxHamburgerMenu } from "react-icons/rx";
-import { Drawer } from "@mui/material";
+import { Drawer, } from "@mui/material";
 import { IoMdClose } from "react-icons/io";
+import { Dialog, Transition, TransitionChild } from "@headlessui/react";
+import SearchComponent from "../search";
 
 const Navbar: React.FC = () => {
   const [open, setOpen] = useState(false);
+  const [openSearch, setOpenSearch] = useState(false)
 
   return (
     <div className="navbar">
@@ -47,7 +50,7 @@ const Navbar: React.FC = () => {
               <Button>Some text</Button>
             </li>
             <li>
-              <FaSearch size={40} />
+              <FaSearch size={40}/>
             </li>
           </ul>
         </div>
@@ -71,6 +74,43 @@ const Navbar: React.FC = () => {
           </ul>
         </div>
       </Drawer>
+      <Transition appear show={openSearch} as={Fragment}>
+              <Dialog
+                as="div"
+                className="relative z-50"
+                onClose={() => {
+                  setOpenSearch(false);
+                }}
+              >
+                <TransitionChild
+                  as={Fragment}
+                  enter="ease-out duration-300"
+                  enterFrom="opacity-0"
+                  enterTo="opacity-100"
+                  leave="ease-in duration-200"
+                  leaveFrom="opacity-100"
+                  leaveTo="opacity-0"
+                >
+                  <div className="fixed inset-0 bg-gray-200 bg-opacity-50 dark:bg-gray-600 dark:bg-opacity-20" />
+                </TransitionChild>
+  
+                <div className="fixed inset-0 overflow-y-auto h-full">
+                  <div className="flex min-h-full items-end justify-end text-center">
+                    <TransitionChild
+                      as={Fragment}
+                      enter="ease-out duration-300"
+                      enterFrom="opacity-0 -right-[400px]"
+                      enterTo="opacity-100 right-0"
+                      leave="ease-in duration-200"
+                      leaveFrom="opacity-100 right-0"
+                      leaveTo="opacity-0 -right-[400px]"
+                    >
+                      <SearchComponent onClose={() => setOpenSearch(false)} />
+                    </TransitionChild>
+                  </div>
+                </div>
+              </Dialog>
+            </Transition>
     </div>
   );
 };

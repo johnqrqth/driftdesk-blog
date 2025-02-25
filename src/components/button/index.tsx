@@ -11,9 +11,7 @@ interface ButtonProps {
 
 const Button: React.FC<ButtonProps> = ({
   children,
-  className,
   onClick,
-  theme,
 }) => {
 
 
